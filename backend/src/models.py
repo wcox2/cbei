@@ -19,8 +19,10 @@ class Tier(Enum):
 @dataclass
 class Team:
     name: str
-    ap_rank: Optional[int] = None        # None if unranked
-    kenpom_rank: Optional[int] = None    # None if unavailable
+    ap_rank: Optional[int] = None
+    kenpom_rank: Optional[int] = None
+    previous_season_ap_rank: Optional[int] = None      # fallback for early season
+    previous_season_kenpom_rank: Optional[int] = None  # fallback for early season
 
 
 @dataclass
